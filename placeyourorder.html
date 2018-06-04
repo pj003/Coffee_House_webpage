@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaJam Coffee House</title>
+	<link rel="stylesheet" type="text/css" href="CSS/javacoffee.css">
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<h1>JavaJam Coffee House</h1>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="menu.html">Menu</a></li>
+				<li><a href="music.php">Music</a></li>
+				<li><a href="jobs.php">Jobs</a></li>
+				<li><a href="gear.php">Gear</a></li>
+				<li><a href="Cart.html">Cart</a></li>
+				<li><a href="placeyourorder.html">Order</a></li>
+			</ul>
+		</nav>
+		<main>
+			<br>
+			<h2 align="center">Shopping Cart</h2>
+			
+		<table id="content" align="center">
+				<tr>
+					<th><b>Description</b></th>
+					<th><b>Quantity</b></th>
+					<th><b>Price</b></th>
+				</tr>
+				<tr>
+					<td>JavaJam Shirt</td>
+					<td>1</td>
+					<td>$14.95</td>
+				</tr>
+				<tr>
+					<td>JavaJam Mug</td>
+					<td>1</td>
+					<td>$9.95</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>Total</td>
+					<td>$25.90</td>
+			</table>
+			<br>
+			
+		   
+			<form method="post" action="placeyourorder.php"> 
+			<div class="row">
+        	<div class="large-8 small-centered columns">
+            <fieldset>
+            	<legend align = "center"><b>Fill Details:</b></legend>
+            <div class="row">       
+            
+			<label for="Name">Name</label><br><br>
+			<dd><input type="text" name="Name"></dd>
+			<label for="Email">Email</label>
+			<input type="text" name="Email">
+			<label for="Address">Address</label>
+			<input type="text" name="Address" >
+			<label for="City">City</label>
+			<input type="text" name="City" >
+			<label for="State">State</label>
+			<input type="text" name="State">
+			<label for="Zip">Zip</label>
+			<input type="text" name="Zip">
+			<label for="Credit_card">Credit Card</label>
+			<input type="text" name="Credit_card">
+			<label for="Month">Expiry Month</label>
+			<input type="text" name="Month">
+			<label for="Year">Year</label>
+			<input type="text" name="Year">
+			<div id="shit"><button >Order Now</button></div>
+		    </div>
+			</form>
+		</main>
+	<footer>Copyright &copy; 2018 JavaJam Coffee House<br>
+		<i><a href="mailto:priyanka@bangalorejayadeva.com">priyanka@bangalorejayadeva.com</a></i>
+	</footer>
+</div>
+</body>
+</html>

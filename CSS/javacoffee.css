@@ -1,0 +1,255 @@
+form {
+ 	   padding: 1em; 
+	 }
+
+label { 
+		display: block;
+		float: left;
+		padding-right: 1em;
+		text-align: right;
+		width: 8em;
+	  }	
+
+input, textarea { 
+					display: block; margin-bottom: 1.5em; 
+
+				}
+
+textarea{
+			display: block; margin-bottom: 1em;
+		}
+
+
+#content-table {
+				border-collapse: collapse;
+				border-spacing: 0px;
+				margin: auto;
+				width: 90%;
+				}
+#content {
+				border-collapse: collapse;
+				border-spacing: 0px;
+				margin: auto;
+				width: 50%;
+				}
+		
+td, th {
+		border-style: none;
+		 padding: 10px;
+		}
+	th{
+		text-align: center;
+	}
+
+button{
+		margin-left: 10px;
+	  }
+		 
+tr:nth-child(odd) { 
+					background-color: #D2B48C; 
+				   }
+
+#road { 
+		background-image: url("../Images/windingroad.jpg");
+		background-size: 100% 100%;
+		height:200px; 
+	  }
+			
+#mugs {
+		    background-image: url("../Images/mugs.jpg");
+			background-size: 100% 100%;
+			height:200px; 
+	  }
+			
+#guitar { 
+			  background-image: url("../Images/heroguitar.jpg");
+			  background-size: 100% 100%;
+			  height:200px; 
+		}
+#couch { 
+			  background-image: url("../Images/couch.jpeg");
+			  background-size: 100% 100%;
+			  height:200px; 
+		}
+#shit {
+	text-align: center;
+}
+#lab {
+	display: block;
+	float: left;
+	width: 8em;
+	text-align: right;
+	padding-bottom: : 1em;
+}
+#lab2 {
+	text-align: left;
+}
+
+
+#myinput {
+	display: block;
+	margin-bottom: 1em;
+}
+
+#myinput {
+	display: block;
+	margin-bottom: 1em;
+}
+
+nav a:link { 
+				color: #FEF6C2;
+		    }
+
+nav a:visited {
+				 color: #D2B48C; 
+			  }
+
+
+nav {
+	  float: left; 
+	  font-size: 1.5em; 
+	  font-weight: bold;
+	  list-style-type: none;
+	  padding-left: 0px;
+	  padding-top: 10px; 
+	  position:static;
+	  text-align: center;
+	  width: 200px; 
+	  }
+
+
+nav ul { 
+		list-style-type: none; 
+		padding-left: 0px;
+		}
+
+nav a {
+		 text-decoration: none;
+	  }
+
+
+body { 
+		background-color: #FCEBB6;
+		background-image: url("../Images/background.gif");
+		color: #221811;
+		font-family: Verdana, Arial, sans-serif;
+		font-size: .8em;
+	  }
+	   
+header {
+		 background-color: #D2B48C;
+		 background-image: url("../Images/javajamlogo.jpg");
+		 background-repeat: no-repeat; 
+		 height: 150px;
+	 	}
+		 
+		 
+h1 {
+	 font-size: 3em;
+	 line-height: 200%;
+	 padding-top: 30px;
+	 padding-left: 220px;
+	}
+
+h4 {
+	 background-color: #D2B48C;
+	 border-bottom: 2px solid #221811; 
+	 clear: left;
+	 font-size: 1.2em; 
+	 padding-left: 10px; 
+	 padding-bottom: 0px;
+	 text-transform: uppercase;
+	}
+
+img {
+	 padding: 0px 10px;
+	}
+
+main { 
+	   background-color: #FCEBB6; 
+	   font-color: #221811;
+	   margin-left: 200px;
+	   padding: 0px 0px 2em 0px; 
+	}
+
+main h2, main h3, main h4, main p, main div, main ul, main dl {
+																 padding-left: 3em; padding-right: 2em; 
+															  }
+header, nav, main, footer { 
+							display: block; 
+						  }
+
+.floatleft {
+			 float: left;
+			  padding: 0px 20px 20px 0px; 
+			}
+
+.details { 
+		   padding-left: 20%;
+		   padding-right: 20%;
+		   overflow: auto; 
+		  }
+ .detail { 
+		   padding-left:0%;
+		   overflow: auto; 
+		}
+
+		   
+#wrapper {
+		   background-color: #231814;
+		   box-shadow: 3px 3px 3px #333;
+		   max-width: 1280px;
+		   margin-right: auto;
+		   margin-left: auto;
+		   min-width: 900px;
+		   width: 80%;  
+		}
+		   
+
+#nav-bar{
+			margin-right: 0px;
+			margin-left : 0px;
+			width:200px;
+		}
+
+
+#menu_main { 
+			 padding: 0px 0px 2em 0px;
+	  		 margin-left: 200px;
+	  		 background-color: #FCEBB6; 
+	   		 font-color: #221811;
+	   		 margin-top: -150px;
+			}
+
+footer { 
+		 background-color: #D2B48C;
+		 border: 2px solid #221811;
+		 font-size: .60em; 
+		 font-style: italic;
+		 padding-bottom: 10px;
+		 text-align: center;
+		}
+label { 
+		display: block;
+		float: left;
+		text-align: right;
+		width: 8em;
+		padding-right: 1em;
+	  }	
+
+.form-left,
+.form-right
+{
+	display: inline-block;
+	width: 48%;
+}
+#final{
+	display:inline-block;
+}
+
+
+
+
+
+
+

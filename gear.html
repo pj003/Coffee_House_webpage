@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaJam Coffee House</title>
+	<link rel="stylesheet" type="text/css" href="CSS/javacoffee.css">
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<h1>JavaJam Coffee House</h1>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a><li>
+					<li><a href="menu.html">Menu</a></li>
+					<li><a href="music.html">Music</a></li>
+					<li><a href="jobs.php">Jobs</a></li>
+					<li><a href="gear.php">Gear</a></li>
+					<li><a href="cart.html">Cart</a></li>
+					<li><a href="placeyourorder.php">Order</a></li>
+			</ul>
+		</nav>
+		<main>
+			<div id="couch"></div>
+			<h2>JavaJam Gear</h2>
+			<p>JavaJam gear not only looks good, it's good for your wallet too.<br></p>
+			<p>Get a 10% discount when you wear a JavaJam shirt or bring in your JavaJam mug!</p>
+
+			<?php
+$user = 'root';
+$pass = '';
+$db = 'wdm';
+$con=mysqli_connect('localhost', $user, $pass, $db);
+
+
+$sql="SELECT description,image from products";
+
+$query= mysqli_query($con,$sql);
+
+
+while ($row = mysqli_fetch_array($query))
+{
+		echo "
+			  <div class=\"details\">
+				<img src=\"$row[image]\" height=\"80\" width=\"80\" class=\"floatleft\">
+				<p>$row[description]</p>
+			
+			</div>";
+  }
+?>
+			
+
+
+			<!--<div class="detail">
+				<img src="Images/javashirt.jpg"  height="80" width="80" class="floatleft">
+				JavaJam shirts are comfortable to wear to school and around town. 100% cotton, XL only $14.95<br>
+				<br>
+				<button>Add to cart</button>
+			</div>
+			
+			<div class="detail">
+				<img src="Images/javamug.jpg"  height="80" width="80" class="floatleft">
+				
+				JavaJam mugs carry a full load of caffiene (12oz.) to jump start your morning. $9.95<br>
+				<br>
+				<button>Add to cart</button>
+			</div>-->
+		</main>
+		<footer>Copyright &copy; 2018 JavaJam Coffee House<br>
+			<i><a href="mailto:poojasd404@gmail.com">poojasd404@gmail.com</a></i>
+		</footer>
+	</div>
+</body>
+</html>

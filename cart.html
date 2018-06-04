@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaJam Coffee House</title>
+	<link rel="stylesheet" type="text/css" href="CSS/javacoffee.css">
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<h1>JavaJam Coffee House</h1>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a><li>
+					<li><a href="menu.html">Menu</a></li>
+					<li><a href="music.php">Music</a></li>
+					<li><a href="jobs.php">Jobs</a></li>
+					<li><a href="gear.php">Gear</a></li>
+					<li><a href="cart.php">Cart</a></li>
+					<li><a href="placeyourorder.php">Order</a></li>
+			</ul>
+		</nav>
+		<main>
+			<br>
+			<h2 align="center">Shopping Cart</h2>
+			<?php
+$user = 'root';
+$pass = '';
+$db = 'wdm';
+$con=mysqli_connect('localhost', $user, $pass, $db);
+
+
+$sql="SELECT cart.description, cart.quantity FROM cart;";
+
+$query= mysqli_query($con,$sql);
+
+				echo "<table id=\"content\" align=\"center\">";
+
+				while ($row = mysqli_fetch_array($query))
+				{
+								echo "<tr>
+										<th><b>$row[description]</b></th>
+										<th><b>$row[quantity]</b></th>
+									</tr>";
+				}
+				echo "</table>";
+			?>
+			
+		<table id="content" align="center">
+				<tr>
+					<th><b>Description</b></th>
+					<th><b>Quantity</b></th>
+					<th><b>Price</b></th>
+				</tr>
+				<tr>
+					<td>JavaJam Shirt</td>
+					<td>1</td>
+					<td>$14.95</td>
+				</tr>
+				<tr>
+					<td>JavaJam Mug</td>
+					<td>1</td>
+					<td>$9.95</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>Total</td>
+					<td>$25.90</td>
+			</table>
+			<br>
+			
+			<div id = "shit">
+			<a href="placeyourorder.php"> <button> Place Order</button></a>
+			<a href="gear.php"> <button> Continue Shopping </button> </a>
+		</div>
+		</main>
+	<footer>Copyright &copy; 2018 JavaJam Coffee House<br>
+		<i><a href="mailto:poojasd404@gmail.com">poojasd404@gmail.com</a></i>
+	</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaJam Coffee House</title>
+	<link rel="stylesheet" type="text/css" href="CSS/javacoffee.css">
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<h1>JavaJam Coffee House</h1>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="menu.html">Menu</a></li>
+				<li><a href="music.html">Music</a></li>
+				<li><a href="jobs.html">Jobs</a></li>
+				<li><a href="gear.html">Gear</a></li>
+				<li><a href="Cart.html">Cart</a></li>
+				<li><a href="placeyourorder.html">Order</a></li>
+			</ul>
+		</nav>
+		<main>
+			<div id="guitar"></div>
+			<h2>Music at JavaJam</h2>
+			<p>The first Friday night each month at JavaJam is a special night. Join us from 8 pm to 11 pm for some music you won&#39;t want to miss!</p>
+			<?php
+$user = 'root';
+$pass = '';
+$db = 'wdm';
+$con=mysqli_connect('localhost', $user, $pass, $db);
+
+
+echo 'connected successfully to wdm database';
+$sql="SELECT musician.name,musician.image,performance.month,performance.description FROM musician INNER JOIN performance ON musician.musicianid=performance.musicianid;";
+
+$query= mysqli_query($con,$sql);
+
+
+while ($row = mysqli_fetch_array($query))
+{
+		echo "<h4>$row[month]</h4>
+			  <div class=\"details\">
+				<img src=\"$row[image]\" height=\"80\" width=\"80\" class=\"floatleft\">
+				<p>$row[description]</p>
+				<p>$row[name]</p>
+			</div>";
+  }
+?>
+		</main>
+		<footer>Copyright &copy; 2018 JavaJam Coffee House<br>
+			<i><a href="mailto:poojasd404@gmail.com">poojasd404@gmail.com</a></i>
+		</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaJam Coffee House</title>
+	<link rel="stylesheet" type="text/css" href="CSS/javacoffee.css">
+	
+
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<h1>JavaJam Coffee House</h1>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a><li>
+					<li><a href="menu.html">Menu</a></li>
+					<li><a href="music.php">Music</a></li>
+					<li><a href="jobs.php">Jobs</a></li>
+					<li><a href="gear.php">Gear</a></li>
+					<li><a href="cart.php">Cart</a></li>
+					<li><a href="placeyourorder.php">Order</a></li>
+			</ul>
+		</nav>
+		<main>
+			<h2>Jobs at JavaJam</h2>
+			<p>Want to work at JavaJam? Fill out the form below to start your application. Required fields are marked with an asterisk (*).</p>
+		<form method="post" action="jobs.php">
+			<label id="lab" for="name">*Name:</label>
+			<input id ="myinput" type="textbox"  name="name"  required>
+			<label id="lab" for="email">*E-mail:</label>
+			<input id="myinput" type="email"  name="email"  required>
+			<label id="lab" for="experience">*Experience:</label>
+			<textarea id="myinput" name="experience" cols="22" rows="2" required></textarea>
+			<button>Apply Now</button>
+		</form>
+		<?php
+	if (isset($_POST['name'])) {
+$user = 'root';
+$pass = '';
+$db = 'wdm';
+$con=mysqli_connect('localhost', $user, $pass, $db);
+if($con)
+	echo 'connected successfully to wdm database';
+
+$sql="INSERT INTO jobs (name, email, experience) VALUES ('$_POST[name]','$_POST[email]','$_POST[experience]')";
+$query= mysqli_query($con,$sql);
+if($query)
+	echo 'data inserted successfully';		
+	}
+?>
+		</main>
+	<footer>Copyright &copy; 2018 JavaJam Coffee House<br>
+		<i><a href="mailto:poojasd404@gmail.com">poojasd404@gmail.com</a></i>
+	</footer>
+</div>
+</body>
+</html>
